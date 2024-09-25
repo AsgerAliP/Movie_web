@@ -1,0 +1,95 @@
+.movie {
+  width: 310px;
+  height: 460px;
+  margin: 1.5rem;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+
+.movie:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05, 1.05);
+}
+
+.movie div:nth-of-type(1) {
+  z-index: 2;
+  position: absolute;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  color: var(--color-3);
+  font-weight: 700;
+}
+
+.movie:hover div:nth-of-type(1) {
+  font-size: larger !important;
+  text-shadow: 1px 1px 10px var(--color-2);
+  opacity: 1;
+}
+
+.movie div:nth-of-type(2) {
+  width: 100%;
+  height: 100%;
+}
+
+.movie:hover div:nth-of-type(2) {
+  height: 100%;
+  opacity: 0.5;
+  font-weight: 900;
+  font-size: large !important;
+  text-shadow: 1px 1px 10px var(--color-2);
+}
+
+.movie div:nth-of-type(2) img {
+  height: 100%;
+  width: 100%;
+}
+
+.movie div:nth-of-type(3) {
+  z-index: 2;
+  background-color: var(--color-2);
+  padding: 16px 24px 24px 24px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0px -1px 8px 5px var(--color-2);
+}
+
+.movie:hover div:nth-of-type(3) {
+  background-color: transparent;
+  font-weight: 900;
+  font-size: larger;
+  text-shadow: 1px 1px 10px var(--color-2);
+  box-shadow: none;
+}
+
+.movie div:nth-of-type(3) span {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  color: var(--color-3);
+}
+
+.movie div:nth-of-type(3) h3 {
+  margin-top: 5px;
+  font-family: "Roboto Slab", serif;
+  color: var(--color-4);
+  font-weight: 900;
+}
+
+/* ----------media-querys------------*/
+
+@media screen and (max-width: 400px) {
+  .movie {
+    width: "100%";
+    margin: 1rem;
+  }
+}
